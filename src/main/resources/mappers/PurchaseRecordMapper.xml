@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="cn.kane.springboot04.shopping.dao.PurchaseRecordMapper">
+
+    <!--购买记录插入-->
+    <!--cn.kane.springboot04.shopping.pojo.PurchaseRecordPo-->
+    <insert id="insertPurchaseRecord" parameterType="cn.kane.springboot04.shopping.pojo.PurchaseRecordPo" >
+        insert into
+            t_purchase_record(user_id,product_id,price,
+                              quantity,sum,purchase_date,note)
+        values (#{userId},#{productId},#{price},
+                       #{quantity},#{sum},now(),#{note})
+    </insert>
+
+</mapper>
+
+
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script type="text/javascript" src="/web/js/jquery-3.1.1.min.js"></script>
+</head>
+<script type="text/javascript">
+    for (var i = 1;i<=10000;i++){
+        var params = {
+            userId:1,
+            productId:1,
+            quantity:1
+        };
+        $.post("./purchase",params,function (result) {
+            //alert(result.message);
+        });
+    }
+
+</script>
+<body>
+<h1>抢购产品测试</h1>
+</body>
+</html>
